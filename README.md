@@ -24,7 +24,7 @@
 - 언어 : C++
 
 ## 👀 새로 바뀐 ALTH 사용법
-README2.md 에 정리해두었으니 확인해주세요
+README2.md 에 정리해두었으니 확인해주세요     
 [README2.md 연결](https://github.com/m2nja201/ALTH-1/blob/96bad69512aa5b5f870d580cadb366dc00c60227/README2.md)
 
 ## 💕 How to initiate and collaborate?
