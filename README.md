@@ -23,8 +23,11 @@
 - 코딩 테스트를 위한 자료 구조와 알고리즘 with C++
 - 언어 : C++
 
+## 👀 새로 바뀐 ALTH 사용법
+README2.md 에 정리해두었으니 확인해주세요
+[README2.md 연결](https://github.com/m2nja201/ALTH-1/blob/96bad69512aa5b5f870d580cadb366dc00c60227/README2.md)
+
 ## 💕 How to initiate and collaborate?
-변경된 사용 방법은 README2.md에 올려뒀습니다~~
 
 **0. 해당 저장소를 fork하여 자신의 깃허브의 Repository로 가져간다.**
 
