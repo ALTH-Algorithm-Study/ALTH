@@ -1,2 +1,3 @@
-﻿  소스.cpp
+﻿  Week2 BST.cpp
+C:\Users\mingy\source\repos\Project7\Project7\Week2 BST.cpp(66): warning C4715: 'bst::find_impl': 모든 제어 경로에서 값을 반환하지는 않습니다.
   Project7.vcxproj -> C:\Users\mingy\source\repos\Project7\Debug\Project7.exe
