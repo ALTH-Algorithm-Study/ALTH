@@ -4,6 +4,7 @@
 using namespace std;
 #define endl "\n"
 
+
 int n;
 bool* visited;
 vector<int>* arr;
@@ -27,9 +28,12 @@ void dfs(int x) {
  	visited[x] = true;
 	for (int i = 0; i < arr[x].size(); i++) {
 		int next = arr[x][i]; // 인접 노드 방문
-		if (ans[next] == 0) {
+		if (visited[next] != true) {
 			ans[next] = x; // 방문하지 않은 노드 저장
 			dfs(next);
+		}
+		else { // 방문 하였을 경우
+			continue; // 다시 arr[1]의 두번쨰 원소부터 시작
 		}
 	}
 }
