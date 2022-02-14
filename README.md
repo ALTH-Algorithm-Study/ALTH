@@ -1,4 +1,4 @@
-# 🎊 ALTH
+## 🏆 ALTH
 알쓰들의 Algorithm Study (2022)
 
 - 김민겸
@@ -24,8 +24,33 @@
 - 언어 : C++
 
 ## 👀 새로 바뀐 ALTH 사용법
-README2.md 에 정리해두었으니 확인해주세요     
-[README2.md 연결](https://github.com/m2nja201/ALTH-1/blob/96bad69512aa5b5f870d580cadb366dc00c60227/README2.md)
+README2.md 에 정리해두었으니 확인해주세요 (관리자의 요청으로 여기에도 넣습니당)     
+[README2.md 연결](https://github.com/m2nja201/ALTH-1/blob/96bad69512aa5b5f870d580cadb366dc00c60227/README2.md)    
+### 📣 어떻게 했능가!!
+1. **fork** 를 해준다.
+2. ``` git clone {저장소 url} ```작성 => 새로운 파일이 생성된다.
+3. ``` git branch {branch_name} ``` 작성 => 새로운 branch 생성
+4. ``` git checkout {branch_name} ``` 작성 => 해당 branch로 작업 위치가 변경
+5. ``` git add {file_name} ``` 작성
+6. ``` git commit -m "[자신이름] 날짜 시간 update " ```   ex) ```[원민재] 0211 13:25```  📌📌📌
+7. ``` git checkout main ``` 작성 => main으로 작업 위치 변경
+8. ``` git merge {branch_name} ``` 작성 => merge
+9. ``` git push origin main ``` 작성 => push
+
+### ⭐ 주의 해야 할 점
+push 하기 전에 항상 pull 해주기!
+```
+git checkout main
+git pull
+git checkout {branch_name}
+git merge main
+```
+### 💬 그 이후
+1. 자신의 레포에서 pull request를 새로 만든다.
+2. organization의 레포에서 **모든 팀원들**은 새로바뀐 사항을 읽어보고, comment 혹은 approve를 남긴다.
+3. 관리자는 해당 pull request를 merge한다.
+
+--
 
 ## 💕 How to initiate and collaborate?
 
