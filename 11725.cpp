@@ -1,90 +1,52 @@
 #include <iostream>
 #include <utility>
+#include <vector>
 using namespace std;
 #define endl "\n"
 
-struct node {
-	int value;
-	node* parent;
-	node* left;
-	node* right;
-};
-
-struct tree {
-	node* root; 
-
-	static tree init() {
-		tree a;
-		a.root = new node{1, NULL, NULL, NULL};
-		return a;
-	}
-
-	node * find(node * root, int findValue) {
-		if (!root)
-			return NULL;
-
-		if (root->value == findValue)
-			return root; // 현재 노드를 반환
-
-		auto firstFound = find(root->left, findValue);
-		if (firstFound != NULL)
-			return firstFound;
-
-		return find(root->right, findValue);
-	}
-
-	void insert(int size, pair<int, int>* arr) {
-		for (int i = 0; i < size; i++) {
-			if (find(root, arr[i].first) != NULL) {
-				node* foundNode = tree::find(root, arr[i].first);
-
-				if (foundNode->left == NULL)
-					foundNode->left = new node{ arr[i].second, foundNode, NULL , NULL };
-				else
-					foundNode->right = new node{ arr[i].second, foundNode, NULL, NULL };
-			}
-			else {
-				node* foundNode = tree::find(root, arr[i].second);
-				if (foundNode->left == NULL)
-					foundNode->left = new node{ arr[i].first, foundNode, NULL, NULL };
-				else
-					foundNode->right = new node{ arr[i].first, foundNode, NULL, NULL };
-			}
-		}
-	}
-
-	void print(int size) {
-		for (int i = 2; i < size + 1; i++) {
-			node * foundNode = find(root, i);
-			cout << foundNode->parent->value << endl;
-		}
-	}
-};
-
 int n;
-pair<int,int > *arr;
-int parent, child;
-
+bool* visited;
+vector<int>* arr;
+int* ans;
 
 void input() {
-	cin >> n;  // 7
-	arr = new pair<int, int>[n]; 
-	for (int i = 0; i < n -1 ; i++) {
-		cin >> parent >> child;
-		arr[i] = make_pair(parent, child);
+	cin >> n;  // 노드의 개수
+	visited = new bool[n + 1]; // 방문했음을 알리는 배열
+	arr = new vector<int>[n + 1];
+	ans = new int[n]; // 부모노드를 담을 배열
+
+	for (int i = 0; i < n - 1; i++) {
+		int p, q;
+		cin >> q >> p;
+		 arr[q].push_back(p);
+		 arr[p].push_back(q);
+	}
+}
+
+void dfs(int x) {
+ 	visited[x] = true;
+	for (int i = 0; i < arr[x].size(); i++) {
+		int next = arr[x][i]; // 인접 노드 방문
+		if (ans[next] == 0) {
+			ans[next] = x; // 방문하지 않은 노드 저장
+			dfs(next);
+		}
 	}
 }
 
 int main() {
-
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
 
 	input();
-	auto tree = tree::init();
-	tree.insert(n-1, arr);
-	tree.print(n);
+
+	dfs(1);
+
+	for (int i = 2; i <= n; i++) {
+		cout << ans[i] << endl;
+	}
 
 	return 0;
 }
+

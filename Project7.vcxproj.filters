@@ -18,13 +18,22 @@
     <ClCompile Include="11052.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Week2 BST.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Week2 트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11725.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Week2 넓이 우선 탐색.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Week2 깊이 우선 탐색.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Week2 DFS재귀.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
