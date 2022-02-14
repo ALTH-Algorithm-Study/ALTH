@@ -50,7 +50,7 @@ git merge main
 2. organization의 레포에서 **모든 팀원들**은 새로바뀐 사항을 읽어보고, comment 혹은 approve를 남긴다.
 3. 관리자는 해당 pull request를 merge한다.
 
---
+---
 
 ## 💕 How to initiate and collaborate?
 
