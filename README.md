@@ -38,10 +38,11 @@ README2.md 에 정리해두었으니 확인해주세요 (관리자의 요청으�
 9. ``` git push origin main ``` 작성 => push
 
 ### ⭐ 주의 해야 할 점
-push 하기 전에 항상 pull 해주기!
+**push 하기 전에 항상 pull 해주기!**
 ```
 git checkout main
-git pull
+git pull upstream main // ALTH 레포 자신의 레포로 pull 하기
+git push origin main // 내 레포에 반영하기
 git checkout {branch_name}
 git merge main
 ```
