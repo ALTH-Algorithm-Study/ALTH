@@ -13,7 +13,8 @@
 push 하기 전에 항상 pull 해주기!
 ```
 git checkout main
-git pull
+git pull upstream main // ALTH 레포 자신의 레포로 pull 하기
+git push origin main // 내 레포에 반영하기
 git checkout {branch_name}
 git merge main
 ```
