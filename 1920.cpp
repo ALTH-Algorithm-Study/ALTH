@@ -2,8 +2,8 @@
 #include <algorithm>
 using namespace std;
 
-
 int n; // 주어진 정수의 개수
+
 int IsNumber(int* arr, int num) {
 	int left = 0; // arr 0번째 인덱스 
 	int right = n - 1; // arr 마지막 인덱스
@@ -15,12 +15,12 @@ int IsNumber(int* arr, int num) {
 			right = middle - 1;
 		} // 찾는 값이 중간 값보다 더 작을 때
 		else if (arr[middle] == num)
-			return 1; // 일치하는 값을 찾았을 때
+			return 1; // 일치하는 값을 찾았을 때 1을 반환
 		else { // 찾는 값이 중간 값보다 더 클 때
 			left = middle + 1;
 		}
 	} while (left <= right);
-	return 0;
+	return 0; // 일치하는 값을 찾지 못했을 때 0을 반환
 }
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 	int* arr = new int[n]; // 정수 배열
 	for (int i = 0; i < n; i++) {
 		cin >> arr[i];
-	}
+	} //  A 배열
 	sort(arr, arr + n);
 
 	int m; cin >> m; // arr배열 안에서 탐색할 정수의 개수
