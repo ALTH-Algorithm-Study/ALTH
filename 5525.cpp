@@ -8,7 +8,7 @@ int cnt = 0;
 int ans = 0; // 포함되어있는 만큼의 개수 
 
 void sol() {
-	for (int i = 1; i < m -1 ; i++) {
+	for (int i = 1; i < m -1 ; i++) { // OOIOIOIOIIOII
 		if (s[i - 1] == 'I' && s[i] == 'O' && s[i + 1] == 'I') {
 			cnt++;
 			if (cnt == n) { // 패턴을 만족할 경우
