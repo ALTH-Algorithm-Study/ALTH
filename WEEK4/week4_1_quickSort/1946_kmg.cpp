@@ -10,21 +10,16 @@ pair<int, int> *arr;
 int ans;
 
 void sol() {
-	ans++; // 서류에서 1등한 지원자
+	ans++; // 서류에서 1등한 지원자는 무조건 채용
 	sort(arr, arr + n); // arr[i].first(서류 면접 순위) 값을 기준으로 오름차순
 
+	int temp = arr[0].second; // 서류 심사 1등 지원자의 면접 순위
 	for (int i = 1; i < n; i++) { // 1등을 제외하고 서류심사 2등부터 꼴등까지
-		for (int j = i - 1; j >= 0; j--) { // 2등은 1등과 비교, 3등은 1, 2등과 비교하기 위한 이중 for문 
-			if (arr[i].second > arr[j].second) {
-				break; // 무조건 선발되지 않을 지원자
-			}
-			else {// 현재 지원자의 면접순위가, 서류 순위가 더 높은 지원자보다 더 높으면 선발될 수 있는 지원자로 간주 
-				if (j == 0) // 서류 순위가 제일 높은 지원자까지 거슬러 올라가 비교했음에도 현재 지원자의 면접 점수가 더 높다면 선발될 수 있음을 최종적으로 확인
-					ans++;
-			}
+		if (arr[i].second < temp) { // 탐색한 지원자의 면접 순위 중 가장 높은 순위와 비교해 더 작으면 (순위가 높으면) 채용 직원으로 간주.
+			ans++; 
+			temp = arr[i].second; // 면접 순위가 높은 지원자의 면접 순위 정보를 갱신
 		}
 	}
-	cout << ans << endl;
 }
 
 int main() {
@@ -41,6 +36,8 @@ int main() {
 		}
 		ans = 0;
 		sol();
+		cout << ans << endl;
 	}
+
 	return 0;
 }
