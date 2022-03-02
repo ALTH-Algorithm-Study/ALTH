@@ -28,7 +28,7 @@ git merge main
 ### 🚨 이상한 에디터가 뜬다 ! 
 뭔가 충돌이 나서 merge가 자동적으로 되지 않을 때 나오는 에디터입니다       
 무조건 이걸로 해결해야지! 하지 마시고 뭐가 문제인지 충분히 생각 후 괜찮다 생각되면 그때 사용하세용
-![에디터캡처](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/282c894d-f095-465b-80df-9f89a348c326/Untitled.png)     
+[에디터캡처](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/282c894d-f095-465b-80df-9f89a348c326/Untitled.png)     
 ```
 i // i 키를 눌러서 insert 모드로 바꾸기
 // 노란색 부분에 commit message 적기
