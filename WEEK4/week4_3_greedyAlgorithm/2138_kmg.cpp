@@ -18,23 +18,21 @@ void lightOn(int idx) {
 }
 
 void sol(int first) {
-	//temp = arr; // 처음 상태 저장
-	//cnt = 0;
+	temp = arr; // 처음 상태 저장
+	cnt = 0;
 
 	if (first == 0) { // 처음 스위치부터 누르는 경우
 		temp[0] = (temp[0] == '0') ? '1' : '0';
 		temp[1] = (temp[1] == '0') ? '1' : '0';
 		cnt++;
 	}
-	else {
-		for (int i = 1; i < n; i++) { // 두번째부터 마지막까지 순회
-			if (temp[i - 1] != res[i - 1]) { // 앞에 있는 전구의 상태가 다르면
-				lightOn(i); // i - 1, i, i + 1 전구를 바꾼다. 
-				cnt++;
-			}
+	for (int i = 1; i < n; i++) { // 두번째부터 마지막까지 순회
+		if (temp[i - 1] != res[i - 1]) { // 앞에 있는 전구의 상태가 다르면
+			lightOn(i); // i - 1, i, i + 1 전구를 바꾼다. 
+			cnt++;
 		}
-		if (temp == res) ans = min(ans, cnt);
 	}
+	if (temp == res) ans = min(ans, cnt);
 }
 
 int main() {
@@ -42,7 +40,7 @@ int main() {
 	cout.tie(NULL);
 	cin.tie(NULL);
 
-	cin >> n >> temp >> res;
+	cin >> n >> arr >> res;
 
 	sol(0);
 	sol(1);
